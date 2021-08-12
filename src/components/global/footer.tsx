@@ -1,10 +1,17 @@
 import { FC } from 'react'
+import { useRouter } from 'next/router'
 import tw, { css } from 'twin.macro'
 
 const Footer: FC = () => {
+  const { pathname } = useRouter()
+
+  if (pathname === '/') {
+    return null
+  }
+
   return (
     <footer css={footerElem}>
-      <div className="container">
+      <div className="container mx-auto">
         <p css={copyright}>
           &copy; Copyright Kazunori Osaki All Rights Resreved.
         </p>

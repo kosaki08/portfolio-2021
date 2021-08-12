@@ -21,7 +21,10 @@ const SideNav: FC = () => {
   const { pathname } = useRouter()
   const { windowSize } = useWindowSize()
 
-  if (windowSize.windowWidth < settings.sizes.tablet) {
+  if (
+    windowSize.windowWidth < settings.sizes.tablet ||
+    windowSize.windowHeight < 520
+  ) {
     return null
   }
 

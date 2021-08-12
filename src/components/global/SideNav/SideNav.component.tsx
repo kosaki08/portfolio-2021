@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import useWindowSize from '../../../hooks/useWindowSize.hook'
 import {
@@ -17,6 +18,7 @@ const links = [
 ]
 
 const SideNav: FC = () => {
+  const { pathname } = useRouter()
   const { windowSize } = useWindowSize()
 
   if (windowSize.windowWidth < settings.sizes.tablet) {
@@ -27,13 +29,15 @@ const SideNav: FC = () => {
     <aside>
       <nav>
         <ul>
-          {links.map((link) => (
-            <li key={link.href} css={[sideNavListItem, link.css]}>
-              <Link passHref href={link.href}>
-                <a>{link.label}</a>
-              </Link>
-            </li>
-          ))}
+          {links
+            .filter((link) => link.href !== pathname)
+            .map((link) => (
+              <li key={link.href} css={[sideNavListItem, link.css]}>
+                <Link passHref href={link.href}>
+                  <a>{link.label}</a>
+                </Link>
+              </li>
+            ))}
         </ul>
       </nav>
     </aside>

@@ -39,10 +39,10 @@ const DefaultPageLayout: FC<Props> = ({ title, children }) => {
         <Footer />
         <SideNav />
         <NextNprogress
-          color="#29D"
+          color="rgb(110, 25, 111)"
           startPosition={0.3}
           stopDelayMs={200}
-          height={2}
+          height={7}
           showOnShallow={true}
         />
       </div>

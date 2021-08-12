@@ -35,6 +35,10 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head />
+        <link
+          href="https://fonts.googleapis.com/css?family=Montserrat|Fjalla+One&display=swap"
+          rel="stylesheet"
+        />
         <body>
           <Main />
           <NextScript />

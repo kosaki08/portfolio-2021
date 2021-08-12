@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { motion } from 'framer-motion'
 import NextNprogress from 'nextjs-progressbar'
 
-import Header from '../global/header'
+import Header from '../global/Header/Header.component'
 import Footer from '../global/footer'
 import SideNav from '../global/SideNav/SideNav.component'
 import { siteContainer, siteInner } from './default-page-layout.style'

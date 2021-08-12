@@ -5,7 +5,7 @@ const siteContainer = css`
 `
 
 const siteInner = css`
-  ${tw`container mx-auto`}
+  ${tw`container mx-auto pt-32`}
 `
 
 export { siteContainer, siteInner }

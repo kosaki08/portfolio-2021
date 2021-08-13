@@ -10,6 +10,10 @@ module.exports = {
           main: '#212121',
         },
       },
+      letterSpacing: {
+        titleSP: '4px',
+        titlePC: '7px',
+      },
     },
   },
   variants: {

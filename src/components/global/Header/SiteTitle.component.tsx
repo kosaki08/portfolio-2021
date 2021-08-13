@@ -4,14 +4,15 @@ import Link from 'next/link'
 import tw, { css } from 'twin.macro'
 
 const titleWrapper = css`
-  ${tw`fixed top-10 left-2/4 transform -translate-x-1/2 w-full text-center`}
+  ${tw`fixed top-8 px-4 md:(top-10 left-2/4 transform -translate-x-1/2 text-center)`}
+
+  width: calc(100% - 3.1875rem);
 `
 
 const h1 = css`
-  ${tw`text-base uppercase font-black md:text-lg`}
+  ${tw`text-base uppercase font-black tracking-titleSP md:text-lg md:tracking-titlePC`}
 
   font-family: Montserrat, sans-serif;
-  letter-spacing: 7px;
 `
 
 const titleLink = css`

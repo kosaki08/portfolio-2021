@@ -4,7 +4,8 @@ import Link from 'next/link'
 import tw, { css } from 'twin.macro'
 
 const titleWrapper = css`
-  ${tw`fixed top-8 px-4 md:(top-10 left-2/4 transform -translate-x-1/2 text-center)`}
+  ${tw`fixed top-8 px-4 z-20`}
+  ${tw`md:(top-10 left-2/4 transform -translate-x-1/2 text-center)`}
 
   width: calc(100% - 3.1875rem);
 `

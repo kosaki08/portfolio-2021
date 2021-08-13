@@ -21,7 +21,7 @@ const Footer: FC = () => {
 }
 
 const footerElem = css`
-  ${tw`py-24 px-6 bg-darkGray-main`}
+  ${tw`py-24 px-6 bg-darkGray-main z-10`}
 `
 
 const copyright = css`

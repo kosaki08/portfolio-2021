@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         darkGray: {
           text: '#888',
+          minusTwo: '#2e2e2e',
           minusOne: '#252525',
           main: '#212121',
         },

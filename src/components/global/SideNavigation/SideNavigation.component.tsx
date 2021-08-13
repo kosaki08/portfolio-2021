@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 
 import useWindowSize from '../../../hooks/useWindowSize.hook'
 import {
+  sideNavRoot,
   sideNavListItem,
   sideNavWorks,
   sideNavAbout,
@@ -29,7 +30,7 @@ const SideNav: FC = () => {
   }
 
   return (
-    <aside>
+    <aside css={sideNavRoot}>
       <nav>
         <ul>
           {links

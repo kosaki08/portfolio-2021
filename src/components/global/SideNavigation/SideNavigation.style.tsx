@@ -1,5 +1,9 @@
 import tw, { css } from 'twin.macro'
 
+const sideNavRoot = css`
+  ${tw`relative z-10`}
+`
+
 const sideNavListItem = css`
   ${tw`fixed uppercase`}
 
@@ -39,4 +43,10 @@ const sideNavContact = css`
   }
 `
 
-export { sideNavListItem, sideNavWorks, sideNavAbout, sideNavContact }
+export {
+  sideNavRoot,
+  sideNavListItem,
+  sideNavWorks,
+  sideNavAbout,
+  sideNavContact,
+}

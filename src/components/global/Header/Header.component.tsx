@@ -7,12 +7,16 @@ import HamburgeruIcon from '../HamburgerIcon/HamburgerIcon.component'
 const Header: FC = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
+  const handleButtonClick = () => {
+    setMenuOpen(!menuOpen)
+  }
+
   return (
     <header>
       <SiteTitle />
-      <GlobalMenu menuOpen={menuOpen} />
+      <GlobalMenu handleButtonClick={handleButtonClick} menuOpen={menuOpen} />
       <HamburgeruIcon
-        handleIconClick={() => setMenuOpen(!menuOpen)}
+        handleButtonClick={handleButtonClick}
         menuOpen={menuOpen}
       />
     </header>

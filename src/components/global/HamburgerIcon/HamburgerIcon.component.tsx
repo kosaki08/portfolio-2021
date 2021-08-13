@@ -8,15 +8,15 @@ import {
 } from './HamburgerIcon.style'
 
 interface Props {
-  handleIconClick: () => void
+  handleButtonClick: () => void
   menuOpen: boolean
 }
 
-const HamburgeruIcon: FC<Props> = ({ handleIconClick, menuOpen }) => {
+const HamburgeruIcon: FC<Props> = ({ handleButtonClick, menuOpen }) => {
   return (
     <button
       css={[button, menuOpen && menuOpenButton]}
-      onClick={handleIconClick}
+      onClick={handleButtonClick}
     >
       <span css={[line, menuOpen && menuOpenLine]} />
       <span css={[line, menuOpen && menuOpenLine]} />

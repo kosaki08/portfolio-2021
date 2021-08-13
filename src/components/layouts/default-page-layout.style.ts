@@ -5,7 +5,7 @@ const siteContainer = css`
 `
 
 const siteInner = css`
-  ${tw`relative flex-1 container mx-auto pt-32 z-10`}
+  ${tw`relative flex-1 z-10`}
 `
 
 export { siteContainer, siteInner }

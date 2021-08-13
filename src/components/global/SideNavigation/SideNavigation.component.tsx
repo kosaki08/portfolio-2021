@@ -23,8 +23,8 @@ const SideNav: FC = () => {
   const { windowSize } = useWindowSize()
 
   if (
-    windowSize.windowWidth < settings.sizes.tablet ||
-    windowSize.windowHeight < 520
+    windowSize.windowWidth < settings.sizes.md ||
+    windowSize.windowHeight < settings.threshold.height
   ) {
     return null
   }

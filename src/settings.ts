@@ -1,7 +1,14 @@
 const settings = {
   transitionDelay: 0.2,
   sizes: {
-    tablet: 768,
+    sm: 640,
+    md: 768,
+    lg: 1024,
+    xl: 1280,
+    xxl: 1536,
+  },
+  threshold: {
+    height: 560,
   },
 }
 

@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import NextNprogress from 'nextjs-progressbar'
 
 import Header from '../global/Header/Header.component'
@@ -14,9 +15,14 @@ type Props = {
 }
 
 const DefaultPageLayout: FC<Props> = ({ title, children }) => {
+  const { pathname } = useRouter()
+
   return (
     <>
-      <div css={siteContainer}>
+      <div
+        css={siteContainer}
+        className={pathname === '/' ? 'overflow-hidden' : ''}
+      >
         <Header />
         <div css={siteInner}>
           <Head>

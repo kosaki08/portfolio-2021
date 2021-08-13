@@ -8,7 +8,7 @@ import {
   sideNavWorks,
   sideNavAbout,
   sideNavContact,
-} from './SideNav.style'
+} from './SideNavigation.style'
 import settings from '../../../settings'
 
 const links = [

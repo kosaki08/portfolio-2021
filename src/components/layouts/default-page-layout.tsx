@@ -5,7 +5,7 @@ import NextNprogress from 'nextjs-progressbar'
 
 import Header from '../global/Header/Header.component'
 import Footer from '../global/footer'
-import SideNav from '../global/SideNav/SideNav.component'
+import SideNav from '../global/SideNavigation/SideNavigation.component'
 import { siteContainer, siteInner } from './default-page-layout.style'
 import settings from '../../settings'
 

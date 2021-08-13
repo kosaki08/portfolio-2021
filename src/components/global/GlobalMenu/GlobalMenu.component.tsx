@@ -1,9 +1,17 @@
 import { FC } from 'react'
 import Link from 'next/link'
 
-const GlobalMenu: FC = () => {
+interface Props {
+  menuOpen: boolean
+}
+
+const GlobalMenu: FC<Props> = ({ menuOpen }) => {
+  if (!menuOpen) {
+    return null
+  }
+
   return (
-    <div className="hidden">
+    <div>
       <nav>
         <Link href="/" passHref>
           <a>Home</a>

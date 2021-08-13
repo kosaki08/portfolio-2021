@@ -5,7 +5,9 @@ const hamburgerWidth = hamburgerHeight * 1.618
 const spanHeight = hamburgerHeight / 3
 
 const button = css`
-  ${tw`fixed top-8 right-4 z-50 cursor-pointer focus:outline-none md:(top-10 right-16)`}
+  ${tw`fixed top-8 right-4 z-50 cursor-pointer`}
+  ${tw`md:(top-10 right-10)`}
+  ${tw`focus:(outline-none)`}
 
   height: ${hamburgerHeight}px;
   width: ${hamburgerWidth}px;

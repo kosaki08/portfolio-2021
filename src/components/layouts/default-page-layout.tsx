@@ -1,13 +1,11 @@
 import { FC } from 'react'
 import Head from 'next/head'
-import { motion } from 'framer-motion'
 import NextNprogress from 'nextjs-progressbar'
 
 import Header from '../global/Header/Header.component'
 import Footer from '../global/footer'
 import SideNav from '../global/SideNavigation/SideNavigation.component'
 import { siteContainer, siteInner } from './default-page-layout.style'
-import settings from '../../settings'
 
 type Props = {
   title: string
@@ -24,15 +22,6 @@ const DefaultPageLayout: FC<Props> = ({ title, children }) => {
             <title>{title}</title>
           </Head>
           <main>
-            <motion.h1
-              layoutId="title"
-              className="text-6xl center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: settings.transitionDelay }}
-            >
-              {title}
-            </motion.h1>
             <div>{children}</div>
           </main>
         </div>

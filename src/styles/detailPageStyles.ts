@@ -7,3 +7,9 @@ export const detailPageContainer = css`
 export const detailPageDescription = css`
   ${tw`leading-6 text-center py-6`}
 `
+
+export const detailPageDefaultText = css`
+  p {
+    ${tw`text-sm pb-4`}
+  }
+`

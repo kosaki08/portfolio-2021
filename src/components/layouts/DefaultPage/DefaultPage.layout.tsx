@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import tw, { css } from 'twin.macro'
 
 import { mvWrapper, mvInner } from '../../../styles/mvStyles'
+import { titleWrapper, entryContent, footerElem } from './DefaultPage.style'
 import { pageWrapper } from '../../../styles/wrapperStyles'
 import data from '../../../data'
 import type { pageTypes } from '../../../types/dataTypes'
@@ -12,10 +12,6 @@ type Props = {
   children: React.ReactNode
   pageKey: pageTypes
 }
-
-const titleWrapper = css`
-  ${tw`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}
-`
 
 const DefaultPageLayout: FC<Props> = ({ children, pageKey }) => {
   const { pages } = data
@@ -39,10 +35,10 @@ const DefaultPageLayout: FC<Props> = ({ children, pageKey }) => {
           </div>
         </div>
       </header>
-      <div>{children}</div>
+      <div css={entryContent}>{children}</div>
 
       {pageData.nextPage && (
-        <footer>
+        <footer css={footerElem}>
           Next Page:
           <Link href={pageData.nextPage.path} passHref>
             <a>{pageData.nextPage.label}</a>

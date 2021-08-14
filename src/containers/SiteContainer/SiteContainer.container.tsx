@@ -7,7 +7,7 @@ import Header from '../../components/global/Header/Header.component'
 import Footer from '../../components/global/footer'
 import SideNav from '../../components/global/SideNavigation/SideNavigation.component'
 import BGLines from '../../components/global/BGLines/BGLines.component'
-import { siteContainer, siteInner } from './SiteContainer.style'
+import { siteContainer, contentWrapper } from './SiteContainer.style'
 
 type Props = {
   title: string
@@ -24,7 +24,7 @@ const DefaultPageContainer: FC<Props> = ({ title, children }) => {
         className={pathname === '/' ? 'overflow-hidden' : ''}
       >
         <Header />
-        <div css={siteInner}>
+        <div css={contentWrapper}>
           <Head>
             <title>{title}</title>
           </Head>

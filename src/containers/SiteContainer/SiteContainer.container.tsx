@@ -28,9 +28,7 @@ const DefaultPageContainer: FC<Props> = ({ title, children }) => {
           <Head>
             <title>{title}</title>
           </Head>
-          <main>
-            <div>{children}</div>
-          </main>
+          <main>{children}</main>
         </div>
         <Footer />
         <SideNav />

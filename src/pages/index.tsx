@@ -1,24 +1,15 @@
 import { FC } from 'react'
 import tw, { css } from 'twin.macro'
-
 import Image from 'next/image'
 
 import SiteContainer from '../containers/SiteContainer/SiteContainer.container'
 import MainVisual from '../components/home/MainVisual.component'
 import HomeCTAButton from '../components/home/Button.component'
 import TitleSVG from '../assets/images/title/txt_hello_world.svg'
+import { pageWrapper } from '../styles/wrapperStyles'
 import settings from '../settings'
 
-const pageWrapper = css`
-  ${tw`h-screen flex`}
-  ${tw`lg:(pt-28 pb-20)`}
-
-  @media (max-height: ${settings.threshold.height}px) {
-    ${tw`pt-0 pb-0`}
-  }
-`
-
-const contents = css`
+const homeContents = css`
   ${tw`flex justify-center items-center flex-col container mx-auto px-4`}
 
   & img {
@@ -33,9 +24,9 @@ const contents = css`
 const Home: FC = () => {
   return (
     <SiteContainer title="Hello World">
-      <div css={pageWrapper}>
+      <div css={pageWrapper} className="flex">
         <MainVisual />
-        <div css={contents}>
+        <div css={homeContents}>
           <div className="pb-20">
             <Image src={TitleSVG} alt="Hello World!" draggable={false} />
           </div>

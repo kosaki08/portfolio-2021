@@ -20,7 +20,7 @@ const MainVisual: FC = () => {
     <div css={[mvWrapper, homeMVWrapper]}>
       <div css={[mvInner, homeMVInner]}>
         <img
-          src="/home/main-visual.jpg"
+          src="/home/mv_home.jpg"
           loading="lazy"
           draggable="false"
           alt="Home page main visual"

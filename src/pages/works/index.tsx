@@ -8,7 +8,7 @@ import DefaultPageLayout from '../../components/layouts/DefaultPage/DefaultPage.
 const Works: FC = () => {
   return (
     <SiteContainer title="Works">
-      <DefaultPageLayout>
+      <DefaultPageLayout pageKey="works">
         <p css={[description]}>This is works page.</p>
         <Link href="/works/osozakura" passHref>
           <a>Osozakura</a>

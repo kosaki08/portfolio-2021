@@ -1,21 +1,25 @@
 import { FC } from 'react'
-import tw, { css } from 'twin.macro'
 
 import SiteContainer from '../containers/SiteContainer/SiteContainer.container'
 import DefaultPageLayout from '../components/layouts/DefaultPage/DefaultPage.layout'
+import { detailPageDefaultText } from '../styles/detailPageStyles'
 
 const Contact: FC = () => {
   return (
     <SiteContainer title="Contact">
       <DefaultPageLayout pageKey="contact">
-        <p css={[description]}>This is contact page.</p>
+        <div css={detailPageDefaultText}>
+          <p>
+            お仕事のご依頼やご質問等ついては、以下のメールアドレスまでご連絡ください。
+            <br />
+            通常3営業日以内に返信しております。
+            <br />
+          </p>
+          <p>claudioropez.k@gmail.com</p>
+        </div>
       </DefaultPageLayout>
     </SiteContainer>
   )
 }
-
-const description = css`
-  ${tw`text-2xl leading-6 text-center mt-6`}
-`
 
 export default Contact

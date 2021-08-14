@@ -23,16 +23,22 @@ const data = [
     tag: 'Web / Paper / Design',
   },
   {
-    title: '株式会社 犬の専門店 HappyLife',
-    href: '/works/happy-life',
-    thumbPath: '/happylife/happylife_1.png',
-    tag: 'Web / E-Commerce / Design / Development / WordPress',
+    title: 'Shizuka Box パンフレット',
+    href: '/works/shizuka-box',
+    thumbPath: '/shizuka-box/shizuka_box_3.png',
+    tag: 'Paper / Design',
   },
   {
     title: '日本ワイン専門店 遅桜',
     href: '/works/osozakura',
     thumbPath: '/osozakura/osozakura_1.png',
     tag: 'Web / Design / Development / WordPress',
+  },
+  {
+    title: '株式会社 犬の専門店 HappyLife',
+    href: '/works/happy-life',
+    thumbPath: '/happylife/happylife_1.png',
+    tag: 'Web / E-Commerce / Design / Development / WordPress',
   },
 ]
 

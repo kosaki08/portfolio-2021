@@ -36,6 +36,67 @@ const data: dataTypes = {
       },
     },
   },
+  worksItem: {
+    utAim: {
+      title: '株式会社 UTエイム Webパンフレット',
+      mvImgPath: '/ut-aim/ut_aim_1.png',
+      tag: 'Web / Development',
+      nextPage: {
+        path: '/works/osozakura-image-design',
+        label: '日本ワイン専門店 遅桜 イメージデザイン',
+      },
+      seo: {
+        title: '株式会社 UTエイム Webパンフレット',
+        description: '株式会社 UTエイム Webパンフレット',
+      },
+    },
+    osozakuraImageDesign: {
+      title: '日本ワイン専門店 遅桜 イメージデザイン',
+      mvImgPath: '/osozakura-image-design/osozakura_image_design_4.jpg',
+      tag: 'Web / Paper / Design',
+      nextPage: {
+        path: '/works/happy-life',
+        label: '株式会社 犬の専門店 HappyLife',
+      },
+      seo: {
+        title: '日本ワイン専門店 遅桜 イメージデザイン',
+        description: '日本ワイン専門店 遅桜 イメージデザイン',
+      },
+    },
+    shizukaBox: {
+      title: 'Shizuka Box パンフレット',
+      mvImgPath: '/shizuka-box/shizuka_box_3.png',
+      tag: 'Paper / Design',
+      nextPage: { path: '/works/osozakura', label: '日本ワイン専門店 遅桜' },
+      seo: {
+        title: 'Shizuka Box パンフレット',
+        description: 'Shizuka Box パンフレット',
+      },
+    },
+    osozakura: {
+      title: '日本ワイン専門店 遅桜',
+      mvImgPath: '/osozakura/osozakura_0.jpg',
+      tag: 'Web / Design / Development / WordPress',
+      nextPage: {
+        path: '/works/happy-life',
+        label: '株式会社 犬の専門店 HappyLife',
+      },
+      seo: {
+        title: '日本ワイン専門店 遅桜',
+        description: '日本ワイン専門店 遅桜',
+      },
+    },
+    happylife: {
+      title: '株式会社 犬の専門店 HappyLife',
+      mvImgPath: '/happylife/happylife_2.jpg',
+      tag: 'Web / E-Commerce / Design / Development / WordPress',
+      nextPage: { path: '/contact', label: 'Contact' },
+      seo: {
+        title: '株式会社 犬の専門店 HappyLife',
+        description: '株式会社 犬の専門店 HappyLife',
+      },
+    },
+  },
 }
 
 export default data

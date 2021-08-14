@@ -1,12 +1,12 @@
 import { FC } from 'react'
 import tw, { css } from 'twin.macro'
-import DefaultPageLayout from '../../components/layouts/default-page-layout'
+import SiteContainer from '../../containers/SiteContainer/SiteContainer.container'
 
 const HappyLife: FC = () => {
   return (
-    <DefaultPageLayout title="HappyLife">
+    <SiteContainer title="HappyLife">
       <p css={[description]}>This is Works/HappyLife page.</p>
-    </DefaultPageLayout>
+    </SiteContainer>
   )
 }
 

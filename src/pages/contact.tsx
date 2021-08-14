@@ -1,12 +1,12 @@
 import { FC } from 'react'
 import tw, { css } from 'twin.macro'
-import DefaultPageLayout from '../components/layouts/default-page-layout'
+import SiteContainer from '../containers/SiteContainer/SiteContainer.container'
 
 const Contact: FC = () => {
   return (
-    <DefaultPageLayout title="Contact">
+    <SiteContainer title="Contact">
       <p css={[description]}>This is contact page.</p>
-    </DefaultPageLayout>
+    </SiteContainer>
   )
 }
 

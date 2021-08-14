@@ -1,12 +1,12 @@
 import { FC } from 'react'
 import tw, { css } from 'twin.macro'
-import DefaultPageLayout from '../../components/layouts/default-page-layout'
+import SiteContainer from '../../containers/SiteContainer/SiteContainer.container'
 
 const Osozakura: FC = () => {
   return (
-    <DefaultPageLayout title="Osozakura">
+    <SiteContainer title="Osozakura">
       <p css={[description]}>This is Works/Osozakura page.</p>
-    </DefaultPageLayout>
+    </SiteContainer>
   )
 }
 

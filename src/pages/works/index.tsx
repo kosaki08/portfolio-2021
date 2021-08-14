@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { FC } from 'react'
 import tw, { css } from 'twin.macro'
-import DefaultPageLayout from '../../components/layouts/default-page-layout'
+import SiteContainer from '../../containers/SiteContainer/SiteContainer.container'
 
 const Works: FC = () => {
   return (
-    <DefaultPageLayout title="Works">
+    <SiteContainer title="Works">
       <p css={[description]}>This is works page.</p>
 
       <Link href="/works/osozakura" passHref>
@@ -17,7 +17,7 @@ const Works: FC = () => {
       <Link href="/works/happy-life" passHref>
         <a>HappyLife</a>
       </Link>
-    </DefaultPageLayout>
+    </SiteContainer>
   )
 }
 

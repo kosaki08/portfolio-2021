@@ -3,7 +3,7 @@ import tw, { css } from 'twin.macro'
 
 import Image from 'next/image'
 
-import DefaultPageLayout from '../components/layouts/default-page-layout'
+import SiteContainer from '../containers/SiteContainer/SiteContainer.container'
 import MainVisual from '../components/home/MainVisual.component'
 import HomeCTAButton from '../components/home/Button.component'
 import TitleSVG from '../assets/images/title/txt_hello_world.svg'
@@ -32,7 +32,7 @@ const contents = css`
 
 const Home: FC = () => {
   return (
-    <DefaultPageLayout title="Hello World">
+    <SiteContainer title="Hello World">
       <div css={pageWrapper}>
         <MainVisual />
         <div css={contents}>
@@ -42,7 +42,7 @@ const Home: FC = () => {
           <HomeCTAButton />
         </div>
       </div>
-    </DefaultPageLayout>
+    </SiteContainer>
   )
 }
 

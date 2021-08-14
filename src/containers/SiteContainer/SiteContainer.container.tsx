@@ -3,18 +3,18 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import NextNprogress from 'nextjs-progressbar'
 
-import Header from '../global/Header/Header.component'
-import Footer from '../global/footer'
-import SideNav from '../global/SideNavigation/SideNavigation.component'
-import BGLines from '../global/BGLines/BGLines.component'
-import { siteContainer, siteInner } from './default-page-layout.style'
+import Header from '../../components/global/Header/Header.component'
+import Footer from '../../components/global/footer'
+import SideNav from '../../components/global/SideNavigation/SideNavigation.component'
+import BGLines from '../../components/global/BGLines/BGLines.component'
+import { siteContainer, siteInner } from './SiteContainer.style'
 
 type Props = {
   title: string
   children?: React.ReactNode
 }
 
-const DefaultPageLayout: FC<Props> = ({ title, children }) => {
+const DefaultPageContainer: FC<Props> = ({ title, children }) => {
   const { pathname } = useRouter()
 
   return (
@@ -47,4 +47,4 @@ const DefaultPageLayout: FC<Props> = ({ title, children }) => {
   )
 }
 
-export default DefaultPageLayout
+export default DefaultPageContainer

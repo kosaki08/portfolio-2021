@@ -47,7 +47,9 @@
     "eslint": "^7.31.0",
     "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
+    "file-loader": "^6.2.0",
     "glslify": "^7.1.1",
+    "glslify-loader": "^2.0.0",
     "husky": "^7.0.1",
     "lint-staged": "^11.0.1",
     "next-images": "^1.8.1",
@@ -55,6 +57,7 @@
     "postcss": "^8.3.6",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.3.2",
+    "raw-loader": "^4.0.2",
     "tailwindcss": "^2.2.6",
     "twin.macro": "^2.6.2",
     "typescript": "^4.3.5"

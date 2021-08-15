@@ -25,7 +25,9 @@ const Home: FC = () => {
   return (
     <SiteContainer title="Hello World">
       <div css={pageWrapper} className="flex">
-        <MainVisual />
+        <div className="opacity-0 invisible">
+          <MainVisual />
+        </div>
         <div css={homeContents}>
           <div className="pb-20">
             <Image src={TitleSVG} alt="Hello World!" draggable={false} />

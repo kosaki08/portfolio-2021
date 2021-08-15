@@ -24,6 +24,7 @@ const MainVisual: FC = () => {
           loading="lazy"
           draggable="false"
           alt="Home page main visual"
+          className="home-mv-img"
         />
       </div>
     </div>

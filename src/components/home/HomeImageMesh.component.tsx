@@ -1,9 +1,11 @@
 import { FC, memo, useRef } from 'react'
-import { LinearFilter, Texture, TextureLoader, Vector3 } from 'three'
+import { LinearFilter, Texture, TextureLoader, Vector3, Vector2 } from 'three'
 import { extend, useLoader, useFrame } from '@react-three/fiber'
 
 import HomeShaderMaterial from './HomeShaderMaterial.component'
 import useWindowSize from '../../hooks/useWindowSize.hook'
+import useMousePosition from '../../hooks/useMousePosition.hook'
+import { useEffect } from 'react'
 
 extend({ HomeShaderMaterial })
 
@@ -11,6 +13,10 @@ type UniformRef = {
   uTime: number
   uTexture: Texture
   uProgress: number
+  uMousePosition: {
+    x: number
+    y: number
+  }
 }
 
 type Ref = THREE.Mesh & UniformRef
@@ -18,6 +24,11 @@ type Ref = THREE.Mesh & UniformRef
 const ImagesMesh: FC = () => {
   const ref = useRef({} as Ref)
   const { windowSize } = useWindowSize()
+  const mousePosition = useMousePosition()
+
+  useEffect(() => {
+    ref.current.uMousePosition = new Vector2(mousePosition.x, mousePosition.y)
+  }, [mousePosition])
 
   useFrame(({ clock }) => {
     ref.current.uTime = clock.getElapsedTime()

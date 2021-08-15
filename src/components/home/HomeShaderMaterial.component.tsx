@@ -1,4 +1,4 @@
-import { Texture } from 'three'
+import { Texture, Vector2 } from 'three'
 import { ReactThreeFiber } from '@react-three/fiber'
 import { shaderMaterial } from '@react-three/drei'
 
@@ -27,6 +27,7 @@ const HomeShaderMaterial = shaderMaterial(
     uTime: 0,
     uTexture: new Texture(),
     uProgress: 0,
+    uMousePosition: new Vector2(0, 0),
   },
   vertexShader,
   fragmentShader

@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import { Html, Stats } from '@react-three/drei'
 import tw, { css } from 'twin.macro'
 
-import HomePageMesh from '../../home/HomeImageMesh.component'
+import HomePageMesh from '../../home/HomeMesh.component'
 import useWindowSize from '../../../hooks/useWindowSize.hook'
 
 const canvasWrapper = css`

@@ -21,7 +21,7 @@ interface UniformRef {
 
 interface Ref extends THREE.Mesh, UniformRef {}
 
-const ImagesMesh: FC = () => {
+const HomeImagesMesh: FC = () => {
   const ref = useRef({} as Ref)
   const { windowSize } = useWindowSize()
   const { mouse } = useThree()
@@ -65,4 +65,4 @@ const ImagesMesh: FC = () => {
   )
 }
 
-export default memo(ImagesMesh)
+export default memo(HomeImagesMesh)

@@ -1,15 +1,15 @@
-import { FC, memo, useRef } from 'react'
-import { LinearFilter, Texture, TextureLoader, Vector3, Vector2 } from 'three'
-import { extend, useLoader, useFrame } from '@react-three/fiber'
+import { FC, memo, useEffect, useRef } from 'react'
+import { LinearFilter, Texture, TextureLoader, Vector3 } from 'three'
+import { extend, useLoader, useFrame, useThree } from '@react-three/fiber'
+import { useAtom } from 'jotai'
 
 import HomeShaderMaterial from './HomeShaderMaterial.component'
 import useWindowSize from '../../hooks/useWindowSize.hook'
-import useMousePosition from '../../hooks/useMousePosition.hook'
-import { useEffect } from 'react'
+import { HomeStateAtom } from '../../atoms/HomeStateAtom'
 
 extend({ HomeShaderMaterial })
 
-type UniformRef = {
+interface UniformRef {
   uTime: number
   uTexture: Texture
   uProgress: number
@@ -19,35 +19,40 @@ type UniformRef = {
   }
 }
 
-type Ref = THREE.Mesh & UniformRef
+interface Ref extends THREE.Mesh, UniformRef {}
 
 const ImagesMesh: FC = () => {
   const ref = useRef({} as Ref)
   const { windowSize } = useWindowSize()
-  const mousePosition = useMousePosition()
+  const { mouse } = useThree()
+  const [homeState] = useAtom(HomeStateAtom)
 
   useEffect(() => {
-    ref.current.uMousePosition = new Vector2(mousePosition.x, mousePosition.y)
-  }, [mousePosition])
+    ref.current.uMousePosition = mouse
+  }, [homeState, mouse])
 
   useFrame(({ clock }) => {
     ref.current.uTime = clock.getElapsedTime()
   })
 
-  const image = document.querySelector('.home-mv-img') as HTMLImageElement
-
-  const imgSrc = image.src
-  const texture = useLoader(TextureLoader, imgSrc) as Texture
+  const texture = useLoader(TextureLoader, homeState.mvImg.src)
   texture.minFilter = LinearFilter
   texture.generateMipmaps = false
   texture.needsUpdate = true
   ref.current.uTexture = texture
 
-  const bounds = image.getBoundingClientRect()
-  const scales = new Vector3(bounds.width, bounds.height, 1)
+  const scales = new Vector3(
+    homeState.mvImg.bounds.width,
+    homeState.mvImg.bounds.height,
+    1
+  )
   const position = new Vector3(
-    bounds.left - windowSize.windowWidth / 2 + bounds.width / 2,
-    -bounds.top + windowSize.windowHeight / 2 - bounds.height / 2,
+    homeState.mvImg.bounds.left -
+      windowSize.windowWidth / 2 +
+      homeState.mvImg.bounds.width / 2,
+    -homeState.mvImg.bounds.top +
+      windowSize.windowHeight / 2 -
+      homeState.mvImg.bounds.height / 2,
     0
   )
 

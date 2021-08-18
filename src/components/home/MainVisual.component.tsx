@@ -1,6 +1,9 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import tw, { css } from 'twin.macro'
+import useMeasure from 'react-use-measure'
+import { useAtom } from 'jotai'
 
+import { HomeStateAtom } from '../../atoms/HomeStateAtom'
 import { mvWrapper, mvInner } from '../../styles/mvStyles'
 
 const homeMVWrapper = css`
@@ -15,16 +18,30 @@ const homeMVInner = css`
   }
 `
 
+const homeMVImgSrc = '/home/mv_home.jpg'
+
 const MainVisual: FC = () => {
+  const [ref, bounds] = useMeasure()
+  const [, setHomeState] = useAtom(HomeStateAtom)
+
+  useEffect(() => {
+    setHomeState((others) => ({
+      ...others,
+      mvImg: {
+        src: homeMVImgSrc,
+        bounds,
+      },
+    }))
+  }, [bounds, setHomeState])
+
   return (
     <div css={[mvWrapper, homeMVWrapper]}>
       <div css={[mvInner, homeMVInner]}>
         <img
-          src="/home/mv_home.jpg"
-          loading="lazy"
+          src={homeMVImgSrc}
           draggable="false"
           alt="Home page main visual"
-          className="home-mv-img"
+          ref={ref}
         />
       </div>
     </div>

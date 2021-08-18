@@ -29,6 +29,7 @@ const ImagesMesh: FC = () => {
 
   useEffect(() => {
     ref.current.uMousePosition = mouse
+    ref.current.uProgress = homeState.mvImg.isHover ? 1.0 : 0.0
   }, [homeState, mouse])
 
   useFrame(({ clock }) => {
@@ -57,12 +58,7 @@ const ImagesMesh: FC = () => {
   )
 
   return (
-    <mesh
-      onPointerOver={() => (ref.current.uProgress = 1.0)}
-      onPointerOut={() => (ref.current.uProgress = 0.0)}
-      scale={scales}
-      position={position}
-    >
+    <mesh scale={scales} position={position}>
       <planeBufferGeometry args={[1, 1, 32, 32]} />
       <homeShaderMaterial uTexture={texture} ref={ref} />
     </mesh>

@@ -11,6 +11,7 @@ interface HomeStateType {
       x: number
       y: number
     }
+    isHover: boolean
   }
 }
 

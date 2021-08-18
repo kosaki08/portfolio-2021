@@ -14,6 +14,7 @@ const HomeStateAtom = atom<HomeStateType>({
       x: 0,
       y: 0,
     },
+    isHover: false,
   },
 })
 

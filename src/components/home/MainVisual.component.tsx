@@ -28,6 +28,7 @@ const MainVisual: FC = () => {
     setHomeState((others) => ({
       ...others,
       mvImg: {
+        ...others.mvImg,
         src: homeMVImgSrc,
         bounds,
       },

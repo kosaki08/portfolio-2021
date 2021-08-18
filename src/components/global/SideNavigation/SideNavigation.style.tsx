@@ -1,7 +1,7 @@
 import tw, { css } from 'twin.macro'
 
 const sideNavRoot = css`
-  ${tw`relative z-10`}
+  ${tw`relative z-20`}
 `
 
 const sideNavListItem = css`

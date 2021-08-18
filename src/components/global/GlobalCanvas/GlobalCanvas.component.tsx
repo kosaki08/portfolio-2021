@@ -9,7 +9,7 @@ import useWindowSize from '../../../hooks/useWindowSize.hook'
 
 const canvasWrapper = css`
   ${tw`fixed inset-0`}
-  z-index: 20;
+  z-index: 10;
 `
 
 const Loading: FC = () => (

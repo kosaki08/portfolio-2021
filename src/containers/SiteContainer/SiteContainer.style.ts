@@ -1,7 +1,7 @@
 import tw, { css } from 'twin.macro'
 
 const siteContainer = css`
-  ${tw`flex flex-col min-h-screen bg-darkGray-minusOne text-gray-300`}
+  ${tw`flex flex-col min-h-screen bg-darkGray-plusOne text-gray-300`}
 `
 
 const contentWrapper = css`

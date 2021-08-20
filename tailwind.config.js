@@ -9,6 +9,8 @@ module.exports = {
           minusTwo: '#2e2e2e',
           minusOne: '#252525',
           main: '#212121',
+          plusOne: '#1f1f1f',
+          plusTwo: '#181818',
         },
       },
       letterSpacing: {

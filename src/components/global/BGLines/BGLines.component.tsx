@@ -5,7 +5,7 @@ const root = css`
   ${tw`fixed top-0 w-full h-full z-0`}
 
   & > div {
-    ${tw`absolute w-px h-full bg-darkGray-minusTwo`}
+    ${tw`absolute w-px h-full bg-darkGray-plusOne`}
 
     &:first-of-type {
       ${tw`left-1/3 md:(left-1/4)`}

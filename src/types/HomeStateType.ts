@@ -1,18 +1,7 @@
+import type { DefaultImageType } from './imageType'
+
 interface HomeStateType {
-  mvImg: {
-    src: string
-    bounds: {
-      top: number
-      left: number
-      right: number
-      bottom: number
-      width: number
-      height: number
-      x: number
-      y: number
-    }
-    isHover: boolean
-  }
+  mvImg: DefaultImageType
 }
 
 export type { HomeStateType }

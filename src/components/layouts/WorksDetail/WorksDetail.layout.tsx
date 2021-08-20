@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { pageWrapper } from '../../../styles/wrapperStyles'
 import { worksDetailContents } from './WorksDetail.style'
-import data from '../../../data'
+import siteData from '../../../data/siteData'
 import type { worksItemType } from '../../../types/dataTypes'
 
 type Props = {
@@ -12,7 +12,7 @@ type Props = {
 }
 
 const WorksDetailPageLayout: FC<Props> = ({ children, pageKey }) => {
-  const { worksItem } = data
+  const { worksItem } = siteData
   const worksData = worksItem[pageKey]
 
   if (!worksData) {

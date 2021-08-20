@@ -1,9 +1,9 @@
-import WorksTitle from './assets/images/title/txt_works.svg'
-import AboutTitle from './assets/images/title/txt_about.svg'
-import ContactTitle from './assets/images/title/txt_contact.svg'
-import { dataTypes } from './types/dataTypes'
+import WorksTitle from '../assets/images/title/txt_works.svg'
+import AboutTitle from '../assets/images/title/txt_about.svg'
+import ContactTitle from '../assets/images/title/txt_contact.svg'
+import { dataTypes } from '../types/dataTypes'
 
-const data: dataTypes = {
+const siteData: dataTypes = {
   pages: {
     works: {
       title: 'Works',
@@ -99,4 +99,4 @@ const data: dataTypes = {
   },
 }
 
-export default data
+export default siteData

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { mvWrapper, mvInner } from '../../../styles/mvStyles'
 import { titleWrapper, entryContent, footerElem } from './DefaultPage.style'
 import { pageWrapper } from '../../../styles/wrapperStyles'
-import data from '../../../data'
+import siteData from '../../../data/siteData'
 import type { pageTypes } from '../../../types/dataTypes'
 
 type Props = {
@@ -14,7 +14,7 @@ type Props = {
 }
 
 const DefaultPageLayout: FC<Props> = ({ children, pageKey }) => {
-  const { pages } = data
+  const { pages } = siteData
   const pageData = pages[pageKey]
 
   if (!pageData) {

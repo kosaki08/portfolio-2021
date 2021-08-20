@@ -19,17 +19,39 @@ const Osozakura: FC = () => {
         <p>
           ワインショップや飲食店では、写真を見て良い印象を与えられるかどうかが非常に大事になると思いますので、撮影用のラフスケッチや資料等を作成し、ウェブサイトを通して伝えたいお店の良さやこだわりが反映された写真を撮影してもらえるよう、対応させていただきました。
         </p>
-        <img src="/osozakura/osozakura_1.png" alt="遅桜デザイン制作例" />
-        <img src="/osozakura/osozakura_2.png" alt="遅桜デザイン制作例" />
-        <img src="/osozakura/osozakura_4.png" alt="遅桜デザイン制作例" />
-        <img src="/osozakura/osozakura_6.png" alt="遅桜デザイン制作例" />
-        <img src="/osozakura/osozakura_3.png" alt="遅桜デザイン制作例" />
-        <img src="/osozakura/osozakura_5.png" alt="遅桜デザイン制作例" />
-        <img src="/osozakura/osozakura_9.png" alt="遅桜デザイン制作例" />
-        <img src="/osozakura/osozakura_8.png" alt="遅桜デザイン制作例" />
-        <img src="/osozakura/osozakura_10.png" alt="遅桜デザイン制作例" />
-        <img src="/osozakura/osozakura_11.png" alt="遅桜デザイン制作例" />
-        <img src="/osozakura/osozakura_7.png" alt="遅桜デザイン制作例" />
+        <p className="img">
+          <img src="/osozakura/osozakura_1.png" alt="遅桜デザイン制作例" />
+        </p>
+        <p className="img">
+          <img src="/osozakura/osozakura_2.png" alt="遅桜デザイン制作例" />
+        </p>
+        <p className="img-full">
+          <img src="/osozakura/osozakura_4.png" alt="遅桜デザイン制作例" />
+        </p>
+        <p className="img">
+          <img src="/osozakura/osozakura_6.png" alt="遅桜デザイン制作例" />
+        </p>
+        <p className="img">
+          <img src="/osozakura/osozakura_3.png" alt="遅桜デザイン制作例" />
+        </p>
+        <p className="img-full">
+          <img src="/osozakura/osozakura_5.png" alt="遅桜デザイン制作例" />
+        </p>
+        <p className="img">
+          <img src="/osozakura/osozakura_8.png" alt="遅桜デザイン制作例" />
+        </p>
+        <p className="img-full">
+          <img src="/osozakura/osozakura_9.png" alt="遅桜デザイン制作例" />
+        </p>
+        <p className="img">
+          <img src="/osozakura/osozakura_10.png" alt="遅桜デザイン制作例" />
+        </p>
+        <p className="img">
+          <img src="/osozakura/osozakura_11.png" alt="遅桜デザイン制作例" />
+        </p>
+        <p className="img">
+          <img src="/osozakura/osozakura_7.png" alt="遅桜デザイン制作例" />
+        </p>
       </WorksDetailPageLayout>
     </SiteContainer>
   )

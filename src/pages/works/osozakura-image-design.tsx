@@ -13,18 +13,24 @@ const OsozakuraEC: FC = () => {
           <br />
           『日本各地の銘品の縁（ENISHI）をつなぐ』をコンセプトに、日本生まれの高品質ワインを紹介するお店でしたので、日本のこころを大事にしたい、というお店の考えやワインへのこだわりを、デザインを通して伝えられるよう心がけました。
         </p>
-        <img
-          src="/osozakura-image-design/osozakura_image_design_2.jpg"
-          alt="遅桜イメージデザイン"
-        />
-        <img
-          src="/osozakura-image-design/osozakura_image_design_1.jpg"
-          alt="遅桜イメージデザイン"
-        />
-        <img
-          src="/osozakura-image-design/osozakura_image_design_3.jpg"
-          alt="遅桜イメージデザイン"
-        />
+        <p className="img">
+          <img
+            src="/osozakura-image-design/osozakura_image_design_2.jpg"
+            alt="遅桜イメージデザイン"
+          />
+        </p>
+        <p className="img-full">
+          <img
+            src="/osozakura-image-design/osozakura_image_design_1.jpg"
+            alt="遅桜イメージデザイン"
+          />
+        </p>
+        <p className="img">
+          <img
+            src="/osozakura-image-design/osozakura_image_design_3.jpg"
+            alt="遅桜イメージデザイン"
+          />
+        </p>
       </WorksDetailPageLayout>
     </SiteContainer>
   )

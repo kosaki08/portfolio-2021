@@ -2,6 +2,7 @@ import { FC } from 'react'
 import Link from 'next/link'
 
 import { pageWrapper } from '../../../styles/wrapperStyles'
+import { worksDetailContents } from './WorksDetail.style'
 import data from '../../../data'
 import type { worksItemType } from '../../../types/dataTypes'
 
@@ -31,7 +32,7 @@ const WorksDetailPageLayout: FC<Props> = ({ children, pageKey }) => {
           </div>
         </div>
       </header>
-      <div>{children}</div>
+      <div css={worksDetailContents}>{children}</div>
 
       {worksData.nextPage && (
         <footer>

@@ -12,17 +12,30 @@ const HappyLife: FC = () => {
           HappyLife』様の通販機能付きウェブサイトをWordPressで制作させていただきました。
           <br />
           人も犬も楽しく一緒に暮らすお手伝いをしたいというお店の考えを、デザインに反映できるよう心がけました。
-        </p>
-        <p>
+          <br />
           店舗には毎週のように新しい仔犬がやってくるため、仔犬紹介のための更新作業を少しでも減らしたいというご要望をいただいていたため、店舗スタッフの方でも簡単に更新できるよう運用のしやすさにも力を入れ、リニューアル前と比べて、更新にかかる作業時間をおよそ半分程度に短縮できた、リニューアルして良かったとの声をいただいております。
         </p>
-        <img src="/happylife/happylife_1.png" alt="HappyLife制作例" />
-        <img src="/happylife/happylife_8.png" alt="HappyLife制作例" />
-        <img src="/happylife/happylife_2.png" alt="HappyLife制作例" />
-        <img src="/happylife/happylife_6.jpg" alt="HappyLife制作例" />
-        <img src="/happylife/happylife_5.png" alt="HappyLife制作例" />
-        <img src="/happylife/happylife_7.jpg" alt="HappyLife制作例" />
-        <img src="/happylife/happylife_3.png" alt="HappyLife制作例" />
+        <p className="img">
+          <img src="/happylife/happylife_1.png" alt="HappyLife制作例" />
+        </p>
+        <p className="img">
+          <img src="/happylife/happylife_8.png" alt="HappyLife制作例" />
+        </p>
+        <p className="img">
+          <img src="/happylife/happylife_2.png" alt="HappyLife制作例" />
+        </p>
+        <p className="img-full">
+          <img src="/happylife/happylife_6.jpg" alt="HappyLife制作例" />
+        </p>
+        <p className="img">
+          <img src="/happylife/happylife_5.png" alt="HappyLife制作例" />
+        </p>
+        <p className="img">
+          <img src="/happylife/happylife_7.jpg" alt="HappyLife制作例" />
+        </p>
+        <p className="img">
+          <img src="/happylife/happylife_3.png" alt="HappyLife制作例" />
+        </p>
       </WorksDetailPageLayout>
     </SiteContainer>
   )

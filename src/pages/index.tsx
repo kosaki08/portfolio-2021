@@ -41,12 +41,8 @@ const Home: FC = () => {
     }
 
     return () => {
-      if (item1) {
-        item1.removeEventListener('mouseenter', handleMouseEnter)
-      }
-      if (item2) {
-        item2.removeEventListener('mouseleave', handleMouseLeave)
-      }
+      if (item1) item1.removeEventListener('mouseenter', handleMouseEnter)
+      if (item2) item2.removeEventListener('mouseleave', handleMouseLeave)
     }
   }, [setHomeState])
 

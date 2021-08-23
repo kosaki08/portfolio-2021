@@ -11,4 +11,12 @@ const pageWrapper = css`
   }
 `
 
-export { pageWrapper }
+const svgTitleWrapper = css`
+  ${tw`h-0`}
+
+  svg {
+    ${tw`absolute w-full h-full top-0 left-0`}
+  }
+`
+
+export { pageWrapper, svgTitleWrapper }

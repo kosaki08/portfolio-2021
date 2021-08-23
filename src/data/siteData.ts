@@ -1,13 +1,15 @@
-import WorksTitle from '../assets/images/title/txt_works.svg'
-import AboutTitle from '../assets/images/title/txt_about.svg'
-import ContactTitle from '../assets/images/title/txt_contact.svg'
+import {
+  WorksPageTitleSVG,
+  AboutPageTitleSVG,
+  ContactPageTitleSVG,
+} from '../components/global/PageTitle.component'
 import { dataTypes } from '../types/dataTypes'
 
 const siteData: dataTypes = {
   pages: {
     works: {
       title: 'Works',
-      titleImg: WorksTitle,
+      titleImg: WorksPageTitleSVG,
       mvImgPath: '/works/mv_works.jpg',
       nextPage: { path: '/about', label: 'About' },
       seo: {
@@ -17,7 +19,7 @@ const siteData: dataTypes = {
     },
     about: {
       title: 'About',
-      titleImg: AboutTitle,
+      titleImg: AboutPageTitleSVG,
       mvImgPath: '/about/mv_about.jpg',
       nextPage: { path: '/contact', label: 'Contact' },
       seo: {
@@ -27,7 +29,7 @@ const siteData: dataTypes = {
     },
     contact: {
       title: 'Contact',
-      titleImg: ContactTitle,
+      titleImg: ContactPageTitleSVG,
       mvImgPath: '/contact/mv_contact.jpg',
       nextPage: null,
       seo: {

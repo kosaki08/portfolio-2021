@@ -1,3 +1,5 @@
+import { FC } from 'react'
+
 export type pageTypes = 'works' | 'about' | 'contact'
 export type worksItemType =
   | 'utAim'
@@ -23,8 +25,7 @@ export interface dataTypes {
 
 export interface pageDataTypes {
   title: string
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  titleImg: any
+  titleImg: FC
   mvImgPath: string
   nextPage: {
     path: string

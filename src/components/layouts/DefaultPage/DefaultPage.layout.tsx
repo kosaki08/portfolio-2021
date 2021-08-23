@@ -1,10 +1,9 @@
 import { FC } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 
 import { mvWrapper, mvInner } from '../../../styles/mvStyles'
 import { titleWrapper, entryContent, footerElem } from './DefaultPage.style'
-import { pageWrapper } from '../../../styles/wrapperStyles'
+import { pageWrapper, svgTitleWrapper } from '../../../styles/wrapperStyles'
 import siteData from '../../../data/siteData'
 import type { pageTypes } from '../../../types/dataTypes'
 
@@ -30,8 +29,8 @@ const DefaultPageLayout: FC<Props> = ({ children, pageKey }) => {
               <img src={pageData.mvImgPath} alt="メインビジュアル" />
             </div>
           </div>
-          <div css={titleWrapper}>
-            <Image src={pageData.titleImg} alt={pageData.title} />
+          <div css={[svgTitleWrapper, titleWrapper]}>
+            <pageData.titleImg />
           </div>
         </div>
       </header>

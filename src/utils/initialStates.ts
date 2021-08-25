@@ -15,4 +15,4 @@ const initialImageState = {
   bounds: initialBounds,
 }
 
-export { initialImageState }
+export { initialBounds, initialImageState }

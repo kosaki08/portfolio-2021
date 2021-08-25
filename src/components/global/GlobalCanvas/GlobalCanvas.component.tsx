@@ -5,6 +5,7 @@ import { Html, Stats } from '@react-three/drei'
 import tw, { css } from 'twin.macro'
 
 import HomePageMesh from '../../home/HomeMesh.component'
+import WorksMesh from '../../works/WorksMesh.component'
 import useWindowSize from '../../../hooks/useWindowSize.hook'
 
 const canvasWrapper = css`
@@ -39,6 +40,7 @@ const GlobalCanvas: FC = () => {
       >
         <Suspense fallback={<Loading />}>
           {asPath === '/' && <HomePageMesh />}
+          {asPath === '/works' && <WorksMesh />}
         </Suspense>
         {asPath.includes('#debug') && <Stats />}
       </Canvas>

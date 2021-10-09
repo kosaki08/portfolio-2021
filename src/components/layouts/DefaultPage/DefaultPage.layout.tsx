@@ -24,7 +24,7 @@ const DefaultPageLayout: FC<Props> = ({ children, pageKey }) => {
 
   return (
     <div css={pageWrapper}>
-      <header className="pb-20">
+      <header>
         <div className="relative">
           <div css={mvWrapper}>
             <div css={mvInner}>

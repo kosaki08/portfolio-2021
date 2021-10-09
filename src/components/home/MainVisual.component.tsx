@@ -15,6 +15,7 @@ const homeMVWrapper = css`
 const homeMVInner = css`
   img {
     object-position: 50% 80%;
+    height: calc(100vh - 12rem);
   }
 `
 

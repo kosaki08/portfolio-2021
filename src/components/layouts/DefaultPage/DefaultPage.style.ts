@@ -8,7 +8,7 @@ const titleWrapper = css`
   padding-bottom: 30vw;
 
   @media screen and (min-width: ${settings.sizes.lg}px) {
-    width: 30vw;
+    width: 40rem;
   }
 `
 

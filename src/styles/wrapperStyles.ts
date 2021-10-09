@@ -9,6 +9,11 @@ const pageWrapper = css`
   @media (max-height: ${settings.threshold.height}px) {
     ${tw`pt-0 pb-0`}
   }
+
+  header {
+    ${tw`pb-20`}
+    ${tw`md:(pb-36)`}
+  }
 `
 
 const svgTitleWrapper = css`

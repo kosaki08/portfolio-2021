@@ -15,7 +15,7 @@ const Contact: FC = () => {
             通常3営業日以内に返信しております。
             <br />
           </p>
-          <p>claudioropez.k@gmail.com</p>
+          <p>kazunorosaki@gmail.com</p>
         </div>
       </DefaultPageLayout>
     </SiteContainer>

@@ -14,7 +14,7 @@ const mvWrapper = css`
 const mvInner = css`
   img {
     ${tw`w-full object-cover`}
-    height: calc(100vh - 12rem);
+    height: 35rem;
   }
 
   @media screen and (min-width: ${settings.sizes

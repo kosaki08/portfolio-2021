@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { pageWrapper } from '../../../styles/wrapperStyles'
 import { worksDetailContents } from './WorksDetail.style'
 import { nextPageItem } from '../../../styles/nextPageItem'
+import { pad } from '../../../utils/formatNumber'
 import siteData from '../../../data/siteData'
 import type { worksItemType } from '../../../types/dataTypes'
 
@@ -35,6 +36,7 @@ const WorksDetailPageLayout: FC<Props> = ({ children, pageKey }) => {
             <Image src={worksData.mvImgPath} alt="メインビジュアル" />
           </div>
         </div>
+        <span>{`.${pad(worksData.num)}`}</span>
       </header>
       <div css={worksDetailContents}>{children}</div>
 

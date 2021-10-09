@@ -64,6 +64,7 @@ const siteData: dataTypes = {
         title: '株式会社 UTエイム Webパンフレット',
         description: '株式会社 UTエイム Webパンフレット',
       },
+      num: 1,
     },
     osozakuraImageDesign: {
       title: '日本ワイン専門店 遅桜 イメージデザイン',
@@ -77,6 +78,7 @@ const siteData: dataTypes = {
         title: '日本ワイン専門店 遅桜 イメージデザイン',
         description: '日本ワイン専門店 遅桜 イメージデザイン',
       },
+      num: 2,
     },
     shizukaBox: {
       title: 'Shizuka Box パンフレット',
@@ -90,6 +92,7 @@ const siteData: dataTypes = {
         title: 'Shizuka Box パンフレット',
         description: 'Shizuka Box パンフレット',
       },
+      num: 3,
     },
     osozakura: {
       title: '日本ワイン専門店 遅桜',
@@ -103,6 +106,7 @@ const siteData: dataTypes = {
         title: '日本ワイン専門店 遅桜',
         description: '日本ワイン専門店 遅桜',
       },
+      num: 4,
     },
     happylife: {
       title: '株式会社 犬の専門店 HappyLife',
@@ -114,6 +118,7 @@ const siteData: dataTypes = {
         title: '株式会社 犬の専門店 HappyLife',
         description: '株式会社 犬の専門店 HappyLife',
       },
+      num: 5,
     },
   },
 }

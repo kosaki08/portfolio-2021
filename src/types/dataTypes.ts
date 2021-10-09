@@ -49,4 +49,5 @@ export interface worksPageDataTypes {
     title: string
     description: string
   }
+  num: number
 }

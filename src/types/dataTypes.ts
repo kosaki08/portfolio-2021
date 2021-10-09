@@ -26,10 +26,10 @@ export interface dataTypes {
 export interface pageDataTypes {
   title: string
   titleImg: FC
+  path: string
   mvImgPath: string
   nextPage: {
-    path: string
-    label: string
+    key: pageTypes
   } | null
   seo: {
     title: string
@@ -41,9 +41,9 @@ export interface worksPageDataTypes {
   title: string
   mvImgPath: string
   tag: string
+  slug: string
   nextPage: {
-    path: string
-    label: string
+    key: worksItemType
   }
   seo: {
     title: string

@@ -15,6 +15,8 @@ type Props = {
 const DefaultPageLayout: FC<Props> = ({ children, pageKey }) => {
   const { pages } = siteData
   const pageData = pages[pageKey]
+  const nextPageKey = pageData.nextPage?.key
+  const nextPageData = nextPageKey && pages[nextPageKey]
 
   if (!pageData) {
     throw new Error('No Page Data')
@@ -36,11 +38,15 @@ const DefaultPageLayout: FC<Props> = ({ children, pageKey }) => {
       </header>
       <div css={entryContent}>{children}</div>
 
-      {pageData.nextPage && (
+      {nextPageData && (
         <footer css={footerElem}>
-          Next Page:
-          <Link href={pageData.nextPage.path} passHref>
-            <a>{pageData.nextPage.label}</a>
+          <Link href={nextPageData.path} passHref>
+            <a>
+              <div>
+                <img src={nextPageData.mvImgPath} alt={nextPageData.title} />
+              </div>
+              <div>Next Page</div>
+            </a>
           </Link>
         </footer>
       )}

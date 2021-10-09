@@ -14,6 +14,8 @@ type Props = {
 const WorksDetailPageLayout: FC<Props> = ({ children, pageKey }) => {
   const { worksItem } = siteData
   const worksData = worksItem[pageKey]
+  const nextItemKey = worksData.nextPage?.key
+  const nextPageData = nextItemKey && worksItem[nextItemKey]
 
   if (!worksData) {
     throw new Error('No Page Data')
@@ -34,11 +36,15 @@ const WorksDetailPageLayout: FC<Props> = ({ children, pageKey }) => {
       </header>
       <div css={worksDetailContents}>{children}</div>
 
-      {worksData.nextPage && (
+      {nextPageData && (
         <footer>
-          Next Portfolio:
-          <Link href={worksData.nextPage.path} passHref>
-            <a>{worksData.nextPage.label}</a>
+          <Link href={nextPageData.slug} passHref>
+            <a>
+              <div>
+                <img src={nextPageData.mvImgPath} alt={nextPageData.title} />
+              </div>
+              <div>Next Portfolio</div>
+            </a>
           </Link>
         </footer>
       )}

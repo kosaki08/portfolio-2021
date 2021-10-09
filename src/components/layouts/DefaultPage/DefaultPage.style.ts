@@ -12,6 +12,21 @@ const titleWrapper = css`
   }
 `
 
+const header = css`
+  ${tw`pb-20`}
+`
+
+const defaultPageMVInner = css`
+  ${tw`relative block w-full`}
+  height: 30rem;
+
+  @media screen and (min-width: ${settings.sizes
+      .lg}px) and (min-height: ${settings.threshold.height}px) {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2), 0 3px 30px rgba(0, 0, 0, 0.3),
+      0 30px 40px rgba(0, 0, 0, 0.5);
+  }
+`
+
 const entryContent = css`
   ${tw`max-w-screen-md mx-4`}
   ${tw`md:(mx-auto)`}
@@ -22,4 +37,4 @@ const footerElem = css`
   ${tw`md:(pt-32)`}
 `
 
-export { titleWrapper, entryContent, footerElem }
+export { titleWrapper, header, defaultPageMVInner, entryContent, footerElem }

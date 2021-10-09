@@ -27,7 +27,7 @@ export interface pageDataTypes {
   title: string
   titleImg: FC
   path: string
-  mvImgPath: string
+  mvImgPath: StaticImageData
   nextPage: {
     key: pageTypes
   } | null
@@ -39,7 +39,7 @@ export interface pageDataTypes {
 
 export interface worksPageDataTypes {
   title: string
-  mvImgPath: string
+  mvImgPath: StaticImageData
   tag: string
   slug: string
   nextPage: {

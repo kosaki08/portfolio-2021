@@ -4,16 +4,15 @@ import settings from '../settings'
 
 const pageWrapper = css`
   ${tw`min-h-screen`}
-  ${tw`lg:(pt-28 pb-20)`}
+  ${tw`lg:(pt-28)`}
 
   @media (max-height: ${settings.threshold.height}px) {
     ${tw`pt-0 pb-0`}
   }
+`
 
-  header {
-    ${tw`pb-20`}
-    ${tw`md:(pb-36)`}
-  }
+const homePageWrapper = css`
+  ${tw`lg:(pb-20)`}
 `
 
 const svgTitleWrapper = css`
@@ -24,4 +23,4 @@ const svgTitleWrapper = css`
   }
 `
 
-export { pageWrapper, svgTitleWrapper }
+export { pageWrapper, homePageWrapper, svgTitleWrapper }

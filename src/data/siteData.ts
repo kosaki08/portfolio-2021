@@ -5,13 +5,23 @@ import {
 } from '../components/global/PageTitle.component'
 import { dataTypes } from '../types/dataTypes'
 
+import MVWorks from '../assets/images/main-visual/mv_works.jpg'
+import MVAbout from '../assets/images/main-visual/mv_about.jpg'
+import MVContact from '../assets/images/main-visual/mv_contact.jpg'
+
+import MVHappyLife from '../assets/images/main-visual/happylife_0.jpg'
+import MVOsozakura from '../assets/images/main-visual/osozakura_0.jpg'
+import MVOsozakuraImageDesign from '../assets/images/main-visual/osozakura_image_design_1.jpg'
+import MVShizukaBox from '../assets/images/main-visual/shizuka_box_1.png'
+import MVUtAim from '../assets/images/main-visual/ut_aim_1.png'
+
 const siteData: dataTypes = {
   pages: {
     works: {
       title: 'Works',
       titleImg: WorksPageTitleSVG,
       path: '/works',
-      mvImgPath: '/works/mv_works.jpg',
+      mvImgPath: MVWorks,
       nextPage: { key: 'about' },
       seo: {
         title: 'Works',
@@ -22,7 +32,7 @@ const siteData: dataTypes = {
       title: 'About',
       titleImg: AboutPageTitleSVG,
       path: '/about',
-      mvImgPath: '/about/mv_about.jpg',
+      mvImgPath: MVAbout,
       nextPage: { key: 'contact' },
       seo: {
         title: 'About',
@@ -33,7 +43,7 @@ const siteData: dataTypes = {
       title: 'Contact',
       titleImg: ContactPageTitleSVG,
       path: '/contact',
-      mvImgPath: '/contact/mv_contact.jpg',
+      mvImgPath: MVContact,
       nextPage: null,
       seo: {
         title: 'Contact',
@@ -44,7 +54,7 @@ const siteData: dataTypes = {
   worksItem: {
     utAim: {
       title: '株式会社 UTエイム Webパンフレット',
-      mvImgPath: '/ut-aim/ut_aim_1.png',
+      mvImgPath: MVUtAim,
       tag: 'Web / Development',
       slug: 'ut-aim',
       nextPage: {
@@ -57,7 +67,7 @@ const siteData: dataTypes = {
     },
     osozakuraImageDesign: {
       title: '日本ワイン専門店 遅桜 イメージデザイン',
-      mvImgPath: '/osozakura-image-design/osozakura_image_design_4.jpg',
+      mvImgPath: MVOsozakuraImageDesign,
       tag: 'Web / Paper / Design',
       slug: 'osozakura-image-design',
       nextPage: {
@@ -70,7 +80,7 @@ const siteData: dataTypes = {
     },
     shizukaBox: {
       title: 'Shizuka Box パンフレット',
-      mvImgPath: '/shizuka-box/shizuka_box_3.png',
+      mvImgPath: MVShizukaBox,
       tag: 'Paper / Design',
       slug: 'shizuka-box',
       nextPage: {
@@ -83,7 +93,7 @@ const siteData: dataTypes = {
     },
     osozakura: {
       title: '日本ワイン専門店 遅桜',
-      mvImgPath: '/osozakura/osozakura_0.jpg',
+      mvImgPath: MVOsozakura,
       tag: 'Web / Design / Development / WordPress',
       slug: 'osozakura',
       nextPage: {
@@ -96,7 +106,7 @@ const siteData: dataTypes = {
     },
     happylife: {
       title: '株式会社 犬の専門店 HappyLife',
-      mvImgPath: '/happylife/happylife_2.jpg',
+      mvImgPath: MVHappyLife,
       tag: 'Web / E-Commerce / Design / Development / WordPress',
       slug: 'happy-life',
       nextPage: { key: 'utAim' },

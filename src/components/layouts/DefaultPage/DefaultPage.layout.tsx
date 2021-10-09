@@ -1,8 +1,15 @@
 import { FC } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
-import { mvWrapper, mvInner } from '../../../styles/mvStyles'
-import { titleWrapper, entryContent, footerElem } from './DefaultPage.style'
+import { mvWrapper } from '../../../styles/mvStyles'
+import {
+  titleWrapper,
+  header,
+  defaultPageMVInner,
+  entryContent,
+} from './DefaultPage.style'
+import { nextPageItem } from '../../../styles/nextPageItem'
 import { pageWrapper, svgTitleWrapper } from '../../../styles/wrapperStyles'
 import siteData from '../../../data/siteData'
 import type { pageTypes } from '../../../types/dataTypes'
@@ -24,11 +31,16 @@ const DefaultPageLayout: FC<Props> = ({ children, pageKey }) => {
 
   return (
     <div css={pageWrapper}>
-      <header>
+      <header css={header}>
         <div className="relative">
           <div css={mvWrapper}>
-            <div css={mvInner}>
-              <img src={pageData.mvImgPath} alt="メインビジュアル" />
+            <div css={defaultPageMVInner}>
+              <Image
+                src={pageData.mvImgPath}
+                alt="メインビジュアル"
+                layout="fill"
+                objectFit="cover"
+              />
             </div>
           </div>
           <div css={[svgTitleWrapper, titleWrapper]}>
@@ -39,13 +51,16 @@ const DefaultPageLayout: FC<Props> = ({ children, pageKey }) => {
       <div css={entryContent}>{children}</div>
 
       {nextPageData && (
-        <footer css={footerElem}>
+        <footer css={nextPageItem}>
           <Link href={nextPageData.path} passHref>
             <a>
-              <div>
-                <img src={nextPageData.mvImgPath} alt={nextPageData.title} />
-              </div>
-              <div>Next Page</div>
+              <Image
+                src={nextPageData.mvImgPath}
+                alt={nextPageData.title}
+                layout="fill"
+                objectFit="cover"
+              />
+              <strong>Next Page</strong>
             </a>
           </Link>
         </footer>

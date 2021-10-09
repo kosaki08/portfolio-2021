@@ -1,8 +1,10 @@
 import { FC } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import { pageWrapper } from '../../../styles/wrapperStyles'
 import { worksDetailContents } from './WorksDetail.style'
+import { nextPageItem } from '../../../styles/nextPageItem'
 import siteData from '../../../data/siteData'
 import type { worksItemType } from '../../../types/dataTypes'
 
@@ -30,20 +32,23 @@ const WorksDetailPageLayout: FC<Props> = ({ children, pageKey }) => {
         </div>
         <div className="relative">
           <div>
-            <img src={worksData.mvImgPath} alt="メインビジュアル" />
+            <Image src={worksData.mvImgPath} alt="メインビジュアル" />
           </div>
         </div>
       </header>
       <div css={worksDetailContents}>{children}</div>
 
       {nextPageData && (
-        <footer>
+        <footer css={nextPageItem}>
           <Link href={nextPageData.slug} passHref>
             <a>
-              <div>
-                <img src={nextPageData.mvImgPath} alt={nextPageData.title} />
-              </div>
-              <div>Next Portfolio</div>
+              <Image
+                src={nextPageData.mvImgPath}
+                alt={nextPageData.title}
+                layout="fill"
+                objectFit="cover"
+              />
+              <strong>Next Portfolio</strong>
             </a>
           </Link>
         </footer>

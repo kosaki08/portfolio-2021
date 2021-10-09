@@ -7,7 +7,7 @@ import MainVisual from '../components/home/MainVisual.component'
 import HomeTitle from '../components/home/HomeTitle.component'
 import HomeCTAButton from '../components/home/Button.component'
 import { HomeStateAtom } from '../atoms/HomeStateAtom'
-import { pageWrapper } from '../styles/wrapperStyles'
+import { pageWrapper, homePageWrapper } from '../styles/wrapperStyles'
 
 const homeContents = css`
   ${tw`flex justify-center items-center flex-col container mx-auto px-4`}
@@ -48,7 +48,7 @@ const Home: FC = () => {
 
   return (
     <SiteContainer title="Hello World">
-      <div css={pageWrapper} className="flex" ref={ref}>
+      <div css={[pageWrapper, homePageWrapper]} className="flex" ref={ref}>
         <div className="opacity-0 invisible">
           <MainVisual />
         </div>

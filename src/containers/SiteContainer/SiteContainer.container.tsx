@@ -2,6 +2,7 @@ import { FC } from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import NextNprogress from 'nextjs-progressbar'
+import { motion } from 'framer-motion'
 
 import Header from '../../components/global/Header/Header.component'
 import Footer from '../../components/global/footer'
@@ -13,6 +14,12 @@ import { siteContainer, contentWrapper } from './SiteContainer.style'
 type Props = {
   title: string
   children?: React.ReactNode
+}
+
+const variants = {
+  hidden: { opacity: 0, x: 0, y: 100 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 0, y: -100 },
 }
 
 const DefaultPageContainer: FC<Props> = ({ title, children }) => {
@@ -29,7 +36,15 @@ const DefaultPageContainer: FC<Props> = ({ title, children }) => {
           <Head>
             <title>{title}</title>
           </Head>
-          <div>{children}</div>
+          <motion.main
+            variants={variants}
+            initial="hidden"
+            animate="enter"
+            exit="exit"
+            transition={{ type: 'linear' }}
+          >
+            {children}
+          </motion.main>
         </div>
         <Footer />
         <SideNav />

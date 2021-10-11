@@ -21,7 +21,7 @@ const siteData: dataTypes = {
       title: 'Works',
       titleImg: WorksPageTitleSVG,
       path: '/works',
-      mvImgPath: MVWorks,
+      mvImgData: MVWorks,
       nextPage: { key: 'about' },
       seo: {
         title: 'Works',
@@ -32,7 +32,7 @@ const siteData: dataTypes = {
       title: 'About',
       titleImg: AboutPageTitleSVG,
       path: '/about',
-      mvImgPath: MVAbout,
+      mvImgData: MVAbout,
       nextPage: { key: 'contact' },
       seo: {
         title: 'About',
@@ -43,7 +43,7 @@ const siteData: dataTypes = {
       title: 'Contact',
       titleImg: ContactPageTitleSVG,
       path: '/contact',
-      mvImgPath: MVContact,
+      mvImgData: MVContact,
       nextPage: null,
       seo: {
         title: 'Contact',
@@ -54,9 +54,9 @@ const siteData: dataTypes = {
   worksItem: {
     utAim: {
       title: '株式会社 UTエイム Webパンフレット',
-      mvImgPath: MVUtAim,
+      mvImgData: MVUtAim,
       tag: 'Web / Development',
-      slug: 'ut-aim',
+      path: '/works/ut-aim',
       nextPage: {
         key: 'osozakuraImageDesign',
       },
@@ -68,9 +68,9 @@ const siteData: dataTypes = {
     },
     osozakuraImageDesign: {
       title: '日本ワイン専門店 遅桜 イメージデザイン',
-      mvImgPath: MVOsozakuraImageDesign,
+      mvImgData: MVOsozakuraImageDesign,
       tag: 'Web / Paper / Design',
-      slug: 'osozakura-image-design',
+      path: '/works/osozakura-image-design',
       nextPage: {
         key: 'shizukaBox',
       },
@@ -82,9 +82,9 @@ const siteData: dataTypes = {
     },
     shizukaBox: {
       title: 'Shizuka Box パンフレット',
-      mvImgPath: MVShizukaBox,
+      mvImgData: MVShizukaBox,
       tag: 'Paper / Design',
-      slug: 'shizuka-box',
+      path: '/works/shizuka-box',
       nextPage: {
         key: 'osozakura',
       },
@@ -96,9 +96,9 @@ const siteData: dataTypes = {
     },
     osozakura: {
       title: '日本ワイン専門店 遅桜',
-      mvImgPath: MVOsozakura,
+      mvImgData: MVOsozakura,
       tag: 'Web / Design / Development / WordPress',
-      slug: 'osozakura',
+      path: '/works/osozakura',
       nextPage: {
         key: 'happylife',
       },
@@ -110,9 +110,9 @@ const siteData: dataTypes = {
     },
     happylife: {
       title: '株式会社 犬の専門店 HappyLife',
-      mvImgPath: MVHappyLife,
+      mvImgData: MVHappyLife,
       tag: 'Web / E-Commerce / Design / Development / WordPress',
-      slug: 'happy-life',
+      path: '/works/happy-life',
       nextPage: { key: 'utAim' },
       seo: {
         title: '株式会社 犬の専門店 HappyLife',

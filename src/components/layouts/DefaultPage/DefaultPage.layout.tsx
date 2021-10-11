@@ -1,5 +1,4 @@
-import { FC } from 'react'
-import Link from 'next/link'
+import React, { FC } from 'react'
 import Image from 'next/image'
 
 import { mvWrapper } from '../../../styles/mvStyles'
@@ -9,7 +8,7 @@ import {
   defaultPageMVInner,
   entryContent,
 } from './DefaultPage.style'
-import { nextPageItem } from '../../../styles/nextPageItem'
+import NextPageItem from '../../global/NextPageItem/NextPageItem.component'
 import { pageWrapper, svgTitleWrapper } from '../../../styles/wrapperStyles'
 import siteData from '../../../data/siteData'
 import type { pageTypes } from '../../../types/dataTypes'
@@ -23,10 +22,19 @@ const DefaultPageLayout: FC<Props> = ({ children, pageKey }) => {
   const { pages } = siteData
   const pageData = pages[pageKey]
   const nextPageKey = pageData.nextPage?.key
-  const nextPageData = nextPageKey && pages[nextPageKey]
+  const nextPageRawData = nextPageKey && pages[nextPageKey]
 
   if (!pageData) {
     throw new Error('No Page Data')
+  }
+
+  let nextPageData
+  if (nextPageRawData) {
+    nextPageData = {
+      title: nextPageRawData.title,
+      path: nextPageRawData.path,
+      mvImgData: nextPageRawData.mvImgData,
+    }
   }
 
   return (
@@ -36,7 +44,7 @@ const DefaultPageLayout: FC<Props> = ({ children, pageKey }) => {
           <div css={mvWrapper}>
             <div css={defaultPageMVInner}>
               <Image
-                src={pageData.mvImgPath}
+                src={pageData.mvImgData}
                 alt="メインビジュアル"
                 layout="fill"
                 objectFit="cover"
@@ -50,21 +58,7 @@ const DefaultPageLayout: FC<Props> = ({ children, pageKey }) => {
       </header>
       <div css={entryContent}>{children}</div>
 
-      {nextPageData && (
-        <footer css={nextPageItem}>
-          <Link href={nextPageData.path} passHref>
-            <a>
-              <Image
-                src={nextPageData.mvImgPath}
-                alt={nextPageData.title}
-                layout="fill"
-                objectFit="cover"
-              />
-              <strong>Next Page</strong>
-            </a>
-          </Link>
-        </footer>
-      )}
+      {nextPageData && <NextPageItem data={nextPageData} label="Next Page" />}
     </div>
   )
 }

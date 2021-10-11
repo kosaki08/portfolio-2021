@@ -1,9 +1,14 @@
 import tw, { css } from 'twin.macro'
+import settings from '../../../settings'
 
 const nextPageItem = css`
   a {
     ${tw`relative block w-full`}
-    height: 30rem;
+    height: 16rem;
+
+    @media screen and (min-width: ${settings.sizes.md}px) {
+      height: 30rem;
+    }
   }
 
   a::before {

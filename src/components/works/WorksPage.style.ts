@@ -6,7 +6,7 @@ const listItem = css`
 
 const imageWrapper = css`
   ${tw`pb-4`}
-  img {
+  & > div {
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2), 0 3px 30px rgba(0, 0, 0, 0.3),
       0 30px 40px rgba(0, 0, 0, 0.5);
   }

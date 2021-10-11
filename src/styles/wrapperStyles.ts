@@ -15,12 +15,14 @@ const homePageWrapper = css`
   ${tw`lg:(pb-20)`}
 `
 
-const svgTitleWrapper = css`
-  ${tw`h-0`}
+const worksItemPageWrapper = css`
+  ${tw`pt-24 md:(pt-28)`}
+`
 
+const svgTitleWrapper = css`
   svg {
     ${tw`absolute w-full h-full top-0 left-0`}
   }
 `
 
-export { pageWrapper, homePageWrapper, svgTitleWrapper }
+export { pageWrapper, homePageWrapper, worksItemPageWrapper, svgTitleWrapper }

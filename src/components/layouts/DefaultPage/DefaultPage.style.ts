@@ -18,7 +18,11 @@ const header = css`
 
 const defaultPageMVInner = css`
   ${tw`relative block w-full`}
-  height: 30rem;
+  height: 16rem;
+
+  @media screen and (min-width: ${settings.sizes.md}px) {
+    height: 30rem;
+  }
 
   @media screen and (min-width: ${settings.sizes
       .lg}px) and (min-height: ${settings.threshold.height}px) {
@@ -28,8 +32,8 @@ const defaultPageMVInner = css`
 `
 
 const entryContent = css`
-  ${tw`max-w-screen-md mx-4`}
-  ${tw`md:(mx-auto)`}
+  ${tw`max-w-screen-md mx-4 pb-12`}
+  ${tw`md:(mx-auto pb-24)`}
 `
 
 const footerElem = css`

@@ -5,10 +5,9 @@ const sideNavRoot = css`
 `
 
 const sideNavListItem = css`
-  ${tw`fixed uppercase`}
+  ${tw`fixed font-fjalla uppercase`}
 
   writing-mode: vertical-rl;
-  font-family: 'Fjalla One', sans-serif;
 
   &::before {
     ${tw`content absolute bg-white `}

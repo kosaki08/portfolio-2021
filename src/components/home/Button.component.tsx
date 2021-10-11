@@ -7,12 +7,11 @@ const buttonWrapper = css`
 `
 
 const button = css`
-  ${tw`inline-block py-2 px-6 text-xs uppercase border border-white duration-200 ease-in-out cursor-pointer tracking-titleSP`}
+  ${tw`inline-block py-2 px-6 text-xs uppercase border border-white duration-200 ease-in-out cursor-pointer font-montserrat tracking-titleSP`}
   ${tw`md:(py-3 px-10 text-sm border-2)`}
   ${tw`hover:(text-gray-800)`}
 
   background: linear-gradient(#fff 0 0) bottom / 100% var(--d, 0%) no-repeat;
-  font-family: Montserrat, sans-serif;
 
   &:hover {
     --d: 100%;

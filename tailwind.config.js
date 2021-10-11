@@ -1,7 +1,11 @@
 module.exports = {
   purge: ['./src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
+    fontFamily: {
+      montserrat: ['montserrat', 'sans-serif'],
+      fjalla: ['Fjalla One', 'sans-serif'],
+    },
     extend: {
       colors: {
         darkGray: {

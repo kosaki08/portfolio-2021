@@ -11,9 +11,7 @@ const titleWrapper = css`
 `
 
 const h1 = css`
-  ${tw`text-base uppercase font-black tracking-titleSP md:text-lg md:tracking-titlePC`}
-
-  font-family: Montserrat, sans-serif;
+  ${tw`text-base uppercase font-montserrat font-black tracking-titleSP md:text-lg md:tracking-titlePC`}
 `
 
 const titleLink = css`

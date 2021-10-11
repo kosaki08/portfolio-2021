@@ -14,7 +14,8 @@ const li = css`
 `
 
 const linkElem = css`
-  ${tw`block py-4 px-4 uppercase`}
+  ${tw`block py-4 px-4 text-xl font-fjalla uppercase`}
+  ${tw`md:(text-3xl)`}
 `
 
 export { nav, ul, li, linkElem }

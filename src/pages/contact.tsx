@@ -10,9 +10,7 @@ const Contact: FC = () => {
       <DefaultPageLayout pageKey="contact">
         <div css={detailPageDefaultText}>
           <p>
-            お仕事のご依頼やご質問等ついては、以下のメールアドレスまでご連絡ください。
-            <br />
-            通常3営業日以内に返信しております。
+            お仕事のご依頼やついては、以下のメールアドレスまでご連絡ください。
             <br />
           </p>
           <p>kazunorosaki@gmail.com</p>

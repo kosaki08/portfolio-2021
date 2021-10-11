@@ -5,7 +5,7 @@ import NextNprogress from 'nextjs-progressbar'
 import { motion } from 'framer-motion'
 
 import Header from '../../components/global/Header/Header.component'
-import Footer from '../../components/global/footer'
+import Footer from '../../components/global/Footer/Footer.component'
 import SideNav from '../../components/global/SideNavigation/SideNavigation.component'
 import BGLines from '../../components/global/BGLines/BGLines.component'
 import GlobalCanvas from '../../components/global/GlobalCanvas/GlobalCanvas.component'

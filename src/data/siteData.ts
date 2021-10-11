@@ -9,11 +9,11 @@ import MVWorks from '../assets/images/main-visual/mv_works.jpg'
 import MVAbout from '../assets/images/main-visual/mv_about.jpg'
 import MVContact from '../assets/images/main-visual/mv_contact.jpg'
 
-import MVHappyLife from '../assets/images/main-visual/happylife_0.jpg'
-import MVOsozakura from '../assets/images/main-visual/osozakura_0.jpg'
-import MVOsozakuraImageDesign from '../assets/images/main-visual/osozakura_image_design_1.jpg'
-import MVShizukaBox from '../assets/images/main-visual/shizuka_box_1.png'
-import MVUtAim from '../assets/images/main-visual/ut_aim_1.png'
+import MVHappyLife from '../assets/images/main-visual/mv_happylife.jpg'
+import MVOsozakura from '../assets/images/main-visual/mv_osozakura.jpg'
+import MVOsozakuraImageDesign from '../assets/images/main-visual/mv_osozakura_image_design.jpg'
+import MVShizukaBox from '../assets/images/main-visual/mv_shizuka_box.png'
+import MVUtAim from '../assets/images/main-visual/mv_ut_aim.png'
 
 const siteData: dataTypes = {
   pages: {

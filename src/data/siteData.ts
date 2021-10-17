@@ -121,6 +121,6 @@ const siteData: dataTypes = {
       num: 5,
     },
   },
-}
+} as const
 
 export default siteData

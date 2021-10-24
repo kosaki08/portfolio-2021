@@ -37,7 +37,7 @@ const DefaultPageContainer: FC<Props> = ({ title, children }) => {
             <title>{title}</title>
           </Head>
           <motion.main
-            variants={variants}
+            variants={pathname !== '/' ? variants : {}}
             initial="hidden"
             animate="enter"
             exit="exit"

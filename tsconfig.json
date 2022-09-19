@@ -15,7 +15,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleResolution": "node",
-    "types": ["@emotion/react/types/css-prop"]
+    "types": ["@emotion/react/types/css-prop"],
+    "incremental": true
   },
   "include": ["src/**/*", "next-env.d.ts", "src/types/**/*.d.ts"],
   "exclude": ["node_modules"]
